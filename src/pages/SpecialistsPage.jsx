@@ -26,7 +26,11 @@ export default function SpecialistsPage({ onOpenBooking, onOpenSpecialistModal }
               <div key={spec.id} className="specialist-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <div className="specialist-avatar-wrapper">
-                    <UserCheck size={72} className="specialist-avatar-icon" />
+                    {spec.image ? (
+                      <img src={spec.image} alt={spec.name} className="specialist-avatar-img" />
+                    ) : (
+                      <UserCheck size={72} className="specialist-avatar-icon" />
+                    )}
                   </div>
 
                   <div className="specialist-info-body">

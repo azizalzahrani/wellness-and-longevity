@@ -210,7 +210,11 @@ export default function HomePage({ setActivePage, onOpenBooking, onOpenServiceMo
             {specialistsData.slice(0, 3).map((specialist) => (
               <div key={specialist.id} className="specialist-card">
                 <div className="specialist-avatar-wrapper">
-                  <UserCheck size={64} className="specialist-avatar-icon" />
+                  {specialist.image ? (
+                    <img src={specialist.image} alt={specialist.name} className="specialist-avatar-img" />
+                  ) : (
+                    <UserCheck size={64} className="specialist-avatar-icon" />
+                  )}
                 </div>
                 <div className="specialist-info-body">
                   <div className="specialist-title-role">{specialist.role}</div>
