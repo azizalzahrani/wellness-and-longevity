@@ -173,6 +173,7 @@ button {
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-gold);
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -272,49 +273,63 @@ button {
   align-items: center;
   justify-content: space-between;
   height: 84px;
+  flex-wrap: nowrap;
 }
 
 .logo-brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .logo-icon-svg {
   width: 38px;
   height: 38px;
   color: var(--color-gold);
+  flex-shrink: 0;
 }
 
 .logo-text-title {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.65rem;
   color: var(--color-charcoal);
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .logo-text-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--color-text-secondary);
   font-weight: 500;
   margin-top: -4px;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .nav-menu-desktop {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.6rem, 1.3vw, 1.75rem);
   list-style: none;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.nav-menu-desktop li {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-link {
-  font-size: 1.02rem;
+  font-size: clamp(0.85rem, 0.9vw, 1rem);
   font-weight: 500;
   color: var(--color-text-primary);
   position: relative;
   padding: 0.4rem 0;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -341,6 +356,8 @@ button {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .mobile-menu-btn {
@@ -350,7 +367,7 @@ button {
   padding: 0.5rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .nav-menu-desktop, .nav-actions-desktop {
     display: none;
   }
