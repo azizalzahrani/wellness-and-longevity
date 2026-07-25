@@ -112,7 +112,25 @@ export default function Footer({ setActivePage, onOpenBooking }) {
           <div>
             © {new Date().getFullYear()} عيادة أثير لطب العافية وتطوير العمر - الرياض. جميع الحقوق محفوظة.
           </div>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <span style={{ fontSize: '0.88rem', color: 'rgba(232, 227, 218, 0.65)' }}>
+              Design by{' '}
+              <a
+                href="https://azion-labs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: '#C09A53',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => (e.target.style.color = '#D4AF67')}
+                onMouseLeave={(e) => (e.target.style.color = '#C09A53')}
+              >
+                AZION Labs
+              </a>
+            </span>
             <button onClick={() => handleNavClick('legal')} className="footer-link" style={{ fontSize: '0.88rem' }}>الخصوصية</button>
             <button onClick={() => handleNavClick('legal')} className="footer-link" style={{ fontSize: '0.88rem' }}>الشروط</button>
             <button onClick={() => handleNavClick('contact')} className="footer-link" style={{ fontSize: '0.88rem' }}>الموقع والوصول</button>
