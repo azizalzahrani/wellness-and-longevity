@@ -291,20 +291,28 @@ button {
   flex-shrink: 0;
 }
 
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .logo-text-title {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.65rem;
+  line-height: 1.15;
   color: var(--color-charcoal);
   letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
 .logo-text-sub {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--color-text-secondary);
   font-weight: 500;
-  margin-top: -4px;
+  margin-top: 3px;
+  line-height: 1.2;
   letter-spacing: 0;
   white-space: nowrap;
 }

@@ -48,7 +48,7 @@ export default function Header({ activePage, setActivePage, onOpenBooking }) {
               <path d="M20 8V32M8 20H32" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
               <circle cx="20" cy="20" r="3" fill="currentColor" />
             </svg>
-            <div>
+            <div className="logo-text-group">
               <div className="logo-text-title">{clinicInfo.name}</div>
               <div className="logo-text-sub">{clinicInfo.tagline}</div>
             </div>
